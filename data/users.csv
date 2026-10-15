@@ -1,0 +1,5 @@
+username,password,role,student_id,email
+faculty,faculty123,faculty,,faculty@attendease.local
+ICT001,student001,student,ICT001,aarav.patel@example.edu
+ICT002,student002,student,ICT002,diya.shah@example.edu
+ICT003,student003,student,ICT003,kabir.mehta@example.edu

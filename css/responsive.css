@@ -1,0 +1,74 @@
+@media (max-width: 1050px) {
+  .app-shell { grid-template-columns: 218px minmax(0, 1fr); }
+  .sidebar { padding-inline: 12px; }
+  .content-area { padding-inline: 28px; }
+  .topbar { padding-inline: 28px; }
+  .landing-main { gap: 55px; }
+}
+@media (max-width: 760px) {
+  .marketing-header { height: 72px; padding-inline: 24px; }
+  .landing-main { width: min(620px, calc(100% - 40px)); min-height: auto; padding: 64px 0; grid-template-columns: 1fr; gap: 46px; }
+  .landing-copy h1 { font-size: clamp(3.6rem, 14vw, 5rem); }
+  .welcome-board { min-height: 390px; }
+  .app-shell { display: block; }
+  .sidebar { position: relative; height: auto; padding: 12px 18px; display: block; }
+  .sidebar-brand { padding: 0; }
+  .sidebar-brand img { width: 32px; height: 32px; }
+  .sidebar-context, .sidebar-bottom { display: none; }
+  .primary-nav { margin-top: 11px; display: flex; overflow-x: auto; gap: 4px; }
+  .nav-heading { display: none; }
+  .nav-link { min-height: 36px; flex: 0 0 auto; padding: 6px 9px; font-size: .72rem; }
+  .nav-icon { width: 21px; height: 21px; }
+  .topbar { position: static; height: 56px; padding-inline: 20px; }
+  .content-area { padding: 29px 20px 24px; }
+}
+@media (max-width: 560px) {
+  .marketing-header { padding-inline: 18px; }
+  .header-note { font-size: .72rem; }
+  .landing-main { width: calc(100% - 36px); padding-top: 48px; }
+  .landing-description { font-size: .97rem; }
+  .welcome-board { min-height: 370px; padding: 23px 20px 18px; }
+  .page-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .page-heading > .button { width: 100%; }
+  .content-area { padding-inline: 14px; }
+  .topbar { padding-inline: 14px; }
+  .breadcrumbs { font-size: .7rem; }
+  .workspace-switch { gap: 6px; font-size: .69rem; }
+  .workspace-switch .avatar { width: 25px; height: 25px; }
+  .content-panel { padding: 16px; }
+  .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .summary-card { min-height: 118px; padding: 14px; }
+  .summary-value { font-size: 1.75rem; }
+  .student-form { grid-template-columns: 1fr; }
+  .student-form button { grid-column: auto; justify-self: stretch; }
+  .panel-heading-roster { align-items: flex-start; flex-direction: column; }
+  .roster-actions, .history-actions { width: 100%; }
+  .roster-actions > *, .history-actions > * { flex: 1 1 auto; }
+  .roster-actions .quiet-button { flex-basis: 100%; }
+  .attendance-controls { grid-template-columns: 1fr; }
+  .roster-section-heading { align-items: flex-start; flex-direction: column; }
+  .attendance-row { align-items: flex-start; }
+  .status-field { width: 122px; }
+  .status-field > span { display: none; }
+  .form-footer { align-items: stretch; flex-direction: column; }
+  .form-footer .button { width: 100%; }
+  .history-toolbar { align-items: stretch; flex-direction: column; }
+  .history-toolbar label { width: 100%; }
+  .history-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .student-page-heading { align-items: stretch; }
+  .profile-picker-label { width: 100%; }
+  .record-chip { margin-left: auto; font-size: 0; }
+  .recent-sessions li { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .recent-sessions span { text-align: left; }
+}
+@media (max-width: 760px) {
+  .login-layout { width: min(520px, calc(100% - 40px)); min-height: auto; padding: 54px 0 38px; grid-template-columns: 1fr; gap: 34px; }
+  .login-intro h1 { font-size: clamp(3.5rem, 13vw, 4.8rem); }
+  .login-subjects { margin-top: 22px; }
+}
+@media (max-width: 560px) {
+  .login-header { padding-inline: 18px; }
+  .login-header .header-note { font-size: .7rem; }
+  .login-layout { width: calc(100% - 32px); padding-top: 40px; }
+  .login-card { padding: 22px 19px; }
+}

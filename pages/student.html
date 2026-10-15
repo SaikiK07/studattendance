@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My attendance | AttendEase</title>
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/dashboard.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-required-role="student">
+  <div class="app-shell student-shell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="../index.html"><img src="../assets/logo.svg" alt="" width="38" height="38"><span>AttendEase</span></a>
+      <div class="sidebar-context"><span class="context-label">STUDENT PORTAL</span><strong>My learning</strong><span>ICT Workshop-I</span></div>
+      <nav class="primary-nav" aria-label="Student navigation"><span class="nav-heading">MY RECORDS</span><a class="nav-link is-active" href="student.html" aria-current="page"><span class="nav-icon">01</span>My attendance</a></nav>
+      <div class="sidebar-bottom"><span class="storage-mark"></span><div><strong>Personal overview</strong><small>Your subject progress at a glance</small></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumbs"><span>Student portal</span><b>/</b><strong>My attendance</strong></div><a class="workspace-switch" href="../index.html" data-sign-out><span class="avatar avatar-student">S</span><span>Sign out</span><span aria-hidden="true">↗</span></a></header>
+      <main class="content-area">
+        <div class="page-heading student-page-heading"><div><p class="eyebrow">YOUR ACADEMIC RECORD</p><h1>My attendance</h1><p class="page-subtitle">A clear view of your attendance across this semester.</p></div><label class="profile-picker-label" for="student-picker">Viewing as<select id="student-picker" class="student-picker"><option value="">Loading students...</option></select></label></div>
+        <p id="student-message" class="notice" role="status" aria-live="polite">Loading student list...</p>
+        <section id="student-dashboard" hidden aria-live="polite">
+          <div class="student-identity"><span class="avatar avatar-large">S</span><div><span class="eyebrow">STUDENT RECORD</span><h2 id="student-welcome" class="student-welcome"></h2></div><span class="record-chip"><span class="online-dot"></span> Record up to date</span></div>
+          <div id="attendance-summary" class="summary-grid"></div>
+          <section class="content-panel"><div class="panel-heading"><div><p class="eyebrow">BY COURSE</p><h2>Subject summary</h2></div></div><div class="table-wrap"><table><caption>Your attendance by subject</caption><thead><tr><th scope="col">Subject</th><th scope="col">Sessions</th><th scope="col">Attended</th><th scope="col">Rate</th></tr></thead><tbody id="student-subject-summary"></tbody></table></div></section>
+          <section class="content-panel history-panel"><div class="panel-heading"><div><p class="eyebrow">SESSION RECORD</p><h2>Attendance history</h2></div></div><div class="table-wrap"><table><caption>Your recorded attendance sessions</caption><thead><tr><th scope="col">Date</th><th scope="col">Subject</th><th scope="col">Status</th></tr></thead><tbody id="student-history-body"></tbody></table></div></section>
+        </section>
+        <footer class="page-footer">AttendEase <span>·</span> Student attendance record</footer>
+      </main>
+    </div>
+  </div>
+  <script src="../js/auth.js"></script><script src="../js/storage.js"></script><script src="../js/csv.js"></script><script src="../js/student.js"></script>
+</body>
+</html>
+

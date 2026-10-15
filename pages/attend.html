@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Take attendance | AttendEase</title>
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/dashboard.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-required-role="faculty">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="../index.html"><img src="../assets/logo.svg" alt="" width="38" height="38"><span>AttendEase</span></a>
+      <div class="sidebar-context"><span class="context-label">WORKSPACE</span><strong>Faculty</strong><span>ICT Workshop-I</span></div>
+      <nav class="primary-nav" aria-label="Faculty navigation"><span class="nav-heading">CLASS MANAGEMENT</span><a class="nav-link" href="faculty.html"><span class="nav-icon">01</span>Overview</a><a class="nav-link" href="students.html"><span class="nav-icon">02</span>Students</a><a class="nav-link is-active" href="attend.html" aria-current="page"><span class="nav-icon">03</span>Take attendance</a><a class="nav-link" href="history.html"><span class="nav-icon">04</span>Attendance history</a></nav>
+      <div class="sidebar-bottom"><span class="storage-mark"></span><div><strong>Saved on this device</strong><small>Your records stay in this browser</small></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumbs"><a href="faculty.html">Faculty</a><b>/</b><strong>Take attendance</strong></div><a class="workspace-switch" href="../index.html" data-sign-out><span class="avatar">F</span><span>Sign out</span><span aria-hidden="true">↗</span></a></header>
+      <main class="content-area">
+        <div class="page-heading"><div><p class="eyebrow">CLASS SESSION</p><h1>Take attendance</h1><p class="page-subtitle">Choose a course and record each student’s attendance.</p></div></div>
+        <form id="attendance-form" class="content-panel attendance-panel">
+          <div class="attendance-controls"><label>Subject<select id="attendance-subject" name="subject" required><option>Computer Networks</option><option>Java Programming</option><option>Computer Organization</option><option>Mathematics</option></select></label><label>Session date<input id="attendance-date" name="date" type="date" required></label></div>
+          <div class="roster-section-heading"><div><p class="eyebrow">CLASS ROSTER</p><h2>Mark each student</h2></div><span class="status-key"><i class="status-dot present-dot"></i>Present <i class="status-dot absent-dot"></i>Absent <i class="status-dot late-dot"></i>Late</span></div>
+          <p id="attendance-message" class="notice" role="status" aria-live="polite">Loading student list...</p>
+          <div id="attendance-roster" class="attendance-roster" aria-label="Student attendance list"></div>
+          <div class="form-footer"><span>Saved attendance can be updated later for the same subject and date.</span><button class="button" type="submit">Save session <span aria-hidden="true">→</span></button></div>
+        </form>
+        <footer class="page-footer">AttendEase <span>·</span> Class attendance</footer>
+      </main>
+    </div>
+  </div>
+  <script src="../js/auth.js"></script><script src="../js/storage.js"></script><script src="../js/csv.js"></script><script src="../js/attend.js"></script>
+</body>
+</html>
+

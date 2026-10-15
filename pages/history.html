@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attendance history | AttendEase</title>
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/dashboard.css"><link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-required-role="faculty">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="../index.html"><img src="../assets/logo.svg" alt="" width="38" height="38"><span>AttendEase</span></a>
+      <div class="sidebar-context"><span class="context-label">WORKSPACE</span><strong>Faculty</strong><span>ICT Workshop-I</span></div>
+      <nav class="primary-nav" aria-label="Faculty navigation"><span class="nav-heading">CLASS MANAGEMENT</span><a class="nav-link" href="faculty.html"><span class="nav-icon">01</span>Overview</a><a class="nav-link" href="students.html"><span class="nav-icon">02</span>Students</a><a class="nav-link" href="attend.html"><span class="nav-icon">03</span>Take attendance</a><a class="nav-link is-active" href="history.html" aria-current="page"><span class="nav-icon">04</span>Attendance history</a></nav>
+      <div class="sidebar-bottom"><span class="storage-mark"></span><div><strong>Saved on this device</strong><small>Your records stay in this browser</small></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumbs"><a href="faculty.html">Faculty</a><b>/</b><strong>History</strong></div><a class="workspace-switch" href="../index.html" data-sign-out><span class="avatar">F</span><span>Sign out</span><span aria-hidden="true">↗</span></a></header>
+      <main class="content-area">
+        <div class="page-heading"><div><p class="eyebrow">CLASS RECORDS</p><h1>Attendance history</h1><p class="page-subtitle">Review sessions and keep a portable copy of your records.</p></div></div>
+        <section class="content-panel history-panel"><div class="history-toolbar"><label>Course<select id="history-subject"><option value="">All subjects</option><option>Computer Networks</option><option>Java Programming</option><option>Computer Organization</option><option>Mathematics</option></select></label><div class="history-actions"><button id="export-history" class="button button-secondary" type="button">Export CSV</button><label class="button button-secondary import-button">Import CSV<input id="import-history" type="file" accept=".csv,text/csv"></label></div></div>
+        <p id="history-message" class="notice" role="status" aria-live="polite">Loading history...</p>
+        <div class="table-wrap"><table><caption>Saved attendance sessions</caption><thead><tr><th scope="col">Date</th><th scope="col">Subject</th><th scope="col">Students</th><th scope="col">Present</th><th scope="col">Absent</th><th scope="col">Late</th><th scope="col">View</th></tr></thead><tbody id="history-table-body"></tbody></table></div></section>
+        <footer class="page-footer">AttendEase <span>·</span> Attendance history</footer>
+      </main>
+    </div>
+  </div>
+  <script src="../js/auth.js"></script><script src="../js/storage.js"></script><script src="../js/csv.js"></script><script src="../js/history.js"></script>
+</body>
+</html>
+
