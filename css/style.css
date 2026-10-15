@@ -95,6 +95,12 @@ button, select { cursor: pointer; }
 .breadcrumbs strong { color: var(--ink); font-weight: 650; }
 .workspace-switch { display: inline-flex; align-items: center; gap: 9px; color: var(--muted-deep); font-size: .77rem; text-decoration: none; }
 .workspace-switch:hover { color: var(--brand); }
+.sign-out-button { min-height: 38px; padding: 4px 10px 4px 5px; border: 1px solid #eadbd5; border-radius: 999px; background: #fffaf8; color: #985b4d; font-weight: 650; cursor: pointer; transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease; }
+.sign-out-button:hover { transform: translateY(-1px); border-color: #dcb8ab; background: #fff4f0; box-shadow: 0 4px 12px #985b4d14; color: #864b40; }
+.sign-out-button:active { transform: translateY(1px) scale(.98); }
+.sign-out-button .avatar { background: #f8eae5; color: #985b4d; }
+.sign-out-mark { margin-left: 1px; color: #bd8070; font-size: .85rem; transition: transform .16s ease; }
+.sign-out-button:hover .sign-out-mark { transform: translate(1px, -1px); }
 .avatar { width: 29px; height: 29px; display: inline-grid; place-items: center; border-radius: 9px; background: var(--brand-pale); color: var(--brand); font-size: .72rem; font-weight: 740; }
 .avatar-student { background: #f5eadf; color: #9d6944; }
 .content-area { width: min(1290px, 100%); margin: 0 auto; padding: 40px clamp(22px, 4vw, 54px) 28px; }
@@ -104,8 +110,9 @@ button, select { cursor: pointer; }
 .page-subtitle { margin: 8px 0 0; color: var(--muted); font-size: .91rem; }
 .page-footer { padding: 32px 0 3px; color: #9aa39e; font-size: .7rem; }
 .page-footer span { margin: 0 6px; color: #bd8b65; }
-.button { min-height: 42px; padding: 10px 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--brand); border-radius: 8px; background: var(--brand); color: white; font-size: .81rem; font-weight: 670; text-decoration: none; transition: background .15s ease, border-color .15s ease, transform .15s ease; }
+.button { min-height: 42px; padding: 10px 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--brand); border-radius: 8px; background: var(--brand); color: white; font-size: .81rem; font-weight: 670; text-decoration: none; transition: background .15s ease, border-color .15s ease, transform .15s ease, box-shadow .15s ease; }
 .button:hover { transform: translateY(-1px); border-color: var(--brand-dark); background: var(--brand-dark); }
+.button:active, .quiet-button:active, .text-button:active { transform: translateY(1px) scale(.98); }
 .button-secondary { border-color: #dce4dc; background: #fff; color: var(--brand); }
 .button-secondary:hover { border-color: #a9c4b0; background: #f6faf6; }
 .quiet-button { min-height: 38px; padding: 8px 10px; border: 0; background: transparent; color: #7b8983; font-size: .75rem; }
@@ -116,6 +123,9 @@ button, select { cursor: pointer; }
 .notice { margin: 16px 0 0; padding: 11px 14px; border: 1px solid #dce8df; border-left: 3px solid #76a285; border-radius: 7px; background: #f1f7f1; color: #526c5b; font-size: .8rem; }
 .message-error { border-color: #f1d8d3; border-left-color: #be6a5b; background: #fbf1ee; color: #864a40; }
 :focus-visible { outline: 3px solid #ba875f80; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
 /* Sign-in page */
 .login-page { min-height: 100vh; background: #f7f7f2; }
 .login-header { max-width: 1320px; }
@@ -143,5 +153,5 @@ button, select { cursor: pointer; }
 .account-help div { padding-top: 8px; line-height: 1.65; }
 .account-help p { margin: 7px 0; }
 .account-help code { padding: 2px 4px; border-radius: 4px; background: #f0f4ef; color: #3c5d4e; font-family: "Consolas", monospace; font-size: .67rem; }
-.login-footer { padding: 0 20px 23px; color: #9aa39c; text-align: center; font-size: .72rem; }
+.login-footer { padding: 0 20px 23px; color: #9aa39c; text-align: center; font-size: .72rem; font-size: 1rem; }
 .login-footer span { margin: 0 6px; color: var(--warm); }
