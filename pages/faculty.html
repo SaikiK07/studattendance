@@ -1,38 +1,103 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Faculty overview | AttendEase</title>
-  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/dashboard.css"><link rel="stylesheet" href="../css/responsive.css">
-</head>
-<body data-required-role="faculty">
-  <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand sidebar-brand" href="../index.html"><img src="../assets/logo.svg" alt="" width="38" height="38"><span>AttendEase</span></a>
-      <div class="sidebar-context"><span class="context-label">WORKSPACE</span><strong>Faculty</strong><span>ICT Workshop-I</span></div>
-      <nav class="primary-nav" aria-label="Faculty navigation">
-        <span class="nav-heading">CLASS MANAGEMENT</span>
-        <a class="nav-link is-active" href="faculty.html" aria-current="page"><span class="nav-icon">01</span>Overview</a>
-        <a class="nav-link" href="students.html"><span class="nav-icon">02</span>Students</a>
-        <a class="nav-link" href="attend.html"><span class="nav-icon">03</span>Take attendance</a>
-        <a class="nav-link" href="history.html"><span class="nav-icon">04</span>Attendance history</a>
-      </nav>
-      <div class="sidebar-bottom"><span class="storage-mark"></span><div><strong>Saved on this device</strong><small>Your records stay in this browser</small></div></div>
-    </aside>
-    <div class="workspace">
-      <header class="topbar"><div class="breadcrumbs"><span>Faculty</span><b>/</b><strong>Overview</strong></div><a class="workspace-switch" href="../index.html" data-sign-out><span class="avatar">F</span><span>Sign out</span><span aria-hidden="true">↗</span></a></header>
-      <main class="content-area">
-        <div class="page-heading"><div><p class="eyebrow">CLASS AT A GLANCE</p><h1>Good day, Faculty</h1><p class="page-subtitle">Here’s the latest from your class attendance.</p></div><a class="button" href="attend.html"><span aria-hidden="true">＋</span> Record attendance</a></div>
-        <section aria-label="Attendance overview"><div id="faculty-summary" class="summary-grid"></div></section>
-        <section class="content-panel recent-panel"><div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Latest sessions</h2></div><a class="quiet-link" href="history.html">See all history <span aria-hidden="true">→</span></a></div><ul id="recent-sessions" class="recent-sessions"></ul></section>
-        <p id="faculty-message" class="notice" role="status" aria-live="polite">Loading overview...</p>
-        <footer class="page-footer">AttendEase <span>·</span> Academic attendance workspace</footer>
-      </main>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faculty overview | AttendEase</title>
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-required-role="faculty">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand sidebar-brand" href="../index.html"
+          ><img src="../assets/logo.svg" alt="" width="38" height="38" /><span
+            >AttendEase</span
+          ></a
+        >
+        <div class="sidebar-context">
+          <span class="context-label">WORKSPACE</span><strong>Faculty</strong>
+        </div>
+        <nav class="primary-nav" aria-label="Faculty navigation">
+          <span class="nav-heading">CLASS MANAGEMENT</span>
+          <a class="nav-link is-active" href="faculty.html" aria-current="page"
+            ><span class="nav-icon">01</span>Overview</a
+          >
+          <a class="nav-link" href="students.html"
+            ><span class="nav-icon">02</span>Students</a
+          >
+          <a class="nav-link" href="attend.html"
+            ><span class="nav-icon">03</span>Take attendance</a
+          >
+          <a class="nav-link" href="history.html"
+            ><span class="nav-icon">04</span>Attendance history</a
+          >
+        </nav>
+        <div class="sidebar-bottom">
+          <span class="storage-mark"></span>
+          <div>
+            <strong>Saved on this device</strong
+            ><small>Your records stay in this browser</small>
+          </div>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="breadcrumbs">
+            <span>Faculty</span><b>/</b><strong>Overview</strong>
+          </div>
+          <button class="workspace-switch sign-out-button" type="button" data-sign-out
+            ><span class="avatar" aria-hidden="true">F</span><span>Sign out</span
+            ><span class="sign-out-mark" aria-hidden="true">↗</span></button
+          >
+        </header>
+        <main class="content-area">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">CLASS AT A GLANCE</p>
+              <h1>Good day, Faculty</h1>
+              <p class="page-subtitle">
+                Here’s the latest from your class attendance.
+              </p>
+            </div>
+            <a class="button" href="attend.html"
+              ><span aria-hidden="true">＋</span> Record attendance</a
+            >
+          </div>
+          <section aria-label="Attendance overview">
+            <div id="faculty-summary" class="summary-grid"></div>
+          </section>
+          <section class="content-panel recent-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">RECENT ACTIVITY</p>
+                <h2>Latest sessions</h2>
+              </div>
+              <a class="quiet-link" href="history.html"
+                >See all history <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <ul id="recent-sessions" class="recent-sessions"></ul>
+          </section>
+          <p
+            id="faculty-message"
+            class="notice"
+            role="status"
+            aria-live="polite"
+          >
+            Loading overview...
+          </p>
+          <footer class="page-footer">
+            AttendEase <span>·</span> Academic attendance workspace
+          </footer>
+        </main>
+      </div>
     </div>
-  </div>
-  <script src="../js/auth.js"></script><script src="../js/storage.js"></script><script src="../js/csv.js"></script><script src="../js/faculty.js"></script>
-</body>
+    <script src="../js/auth.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/csv.js"></script>
+    <script src="../js/faculty.js"></script>
+  </body>
 </html>
-

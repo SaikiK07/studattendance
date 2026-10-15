@@ -1,29 +1,87 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sign in to the AttendEase attendance workspace">
-  <title>Sign in | AttendEase</title>
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css">
-</head>
-<body class="login-page">
-  <header class="marketing-header login-header"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="42" height="42"><span>AttendEase</span></a><span class="header-note"><span class="online-dot"></span> Attendance workspace</span></header>
-  <main class="login-layout">
-    <section class="login-intro"><p class="eyebrow"><span class="eyebrow-line"></span> Academic records, in one place</p><h1>Welcome<br><em>back.</em></h1><p>Sign in to manage class attendance or check your personal progress.</p><div class="login-subjects"><span>Computer Networks</span><span>Java Programming</span><span>Computer Organization</span><span>Mathematics</span></div></section>
-    <section class="login-card" aria-labelledby="login-heading"><div class="login-card-heading"><div class="board-icon">A</div><div><p class="eyebrow">ATTENDEASE</p><h2 id="login-heading">Sign in to continue</h2></div></div>
-      <form id="login-form" class="login-form">
-        <label>Workspace<select id="login-role" name="role" required><option value="faculty">Faculty</option><option value="student">Student</option></select></label>
-        <label>Username<input id="login-username" name="username" autocomplete="username" required placeholder="Enter your username"></label>
-        <label>Password<input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password"></label>
-        <p id="login-message" class="login-message" role="status" aria-live="polite">Use your assigned account details to sign in.</p>
-        <button id="login-submit" class="button login-submit" type="submit">Sign in <span aria-hidden="true">→</span></button>
-      </form>
-    </section>
-  </main>
-  <footer class="login-footer">AttendEase <span>·</span> ICT Workshop-I</footer>
-  <script src="js/csv.js"></script><script src="js/auth.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sign in to the AttendEase attendance workspace"
+    />
+    <title>Sign in | AttendEase</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body class="login-page">
+    <header class="marketing-header login-header">
+      <a class="brand" href="index.html"
+        ><img src="assets/logo.svg" alt="" width="42" height="42" /><span
+          >AttendEase</span
+        ></a
+      ><span class="header-note"
+        ><span class="online-dot"></span> Attendance workspace</span
+      >
+    </header>
+    <main class="login-layout">
+      <section class="login-intro">
+        <p class="eyebrow">
+          <span class="eyebrow-line"></span> Academic records, in one place
+        </p>
+        <h1>Welcome<br /><em>back.</em></h1>
+        <p>
+          Sign in to manage class attendance or check your personal progress.
+        </p>
+        <div class="login-subjects"></div>
+      </section>
+      <section class="login-card" aria-labelledby="login-heading">
+        <div class="login-card-heading">
+          <div class="board-icon">A</div>
+          <div>
+            <p class="eyebrow">ATTENDEASE</p>
+            <h2 id="login-heading">Sign in to continue</h2>
+          </div>
+        </div>
+        <form id="login-form" class="login-form">
+          <label
+            >Workspace<select id="login-role" name="role" required>
+              <option value="faculty">Faculty</option>
+              <option value="student">Student</option>
+            </select></label
+          >
+          <label
+            >Username<input
+              id="login-username"
+              name="username"
+              autocomplete="username"
+              required
+              placeholder="Enter your username"
+          /></label>
+          <label
+            >Password<input
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="Enter your password"
+          /></label>
+          <p
+            id="login-message"
+            class="login-message"
+            role="status"
+            aria-live="polite"
+          >
+            Use your assigned account details to sign in.
+          </p>
+          <button id="login-submit" class="button login-submit" type="submit">
+            Sign in <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="login-footer">AttendEase</footer>
+    <script src="js/csv.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
 </html>
-
