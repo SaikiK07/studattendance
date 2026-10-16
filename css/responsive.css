@@ -58,8 +58,10 @@
   .student-page-heading { align-items: stretch; }
   .profile-picker-label { width: 100%; }
   .record-chip { margin-left: auto; font-size: 0; }
-  .recent-sessions li { align-items: flex-start; flex-direction: column; gap: 3px; }
-  .recent-sessions span { text-align: left; }
+  .recent-sessions li { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .session-meta { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 7px; }
+  .session-date { white-space: normal; }
+  .session-stats { flex-wrap: wrap; }
 }
 @media (max-width: 760px) {
   .login-layout { width: min(520px, calc(100% - 40px)); min-height: auto; padding: 54px 0 38px; grid-template-columns: 1fr; gap: 34px; }

@@ -10,9 +10,16 @@
 .panel-heading h2, .roster-section-heading h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.38rem; font-weight: 400; letter-spacing: -.025em; }
 .recent-panel { margin-top: 6px; }
 .recent-sessions { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
-.recent-sessions li { min-height: 57px; padding: 12px 2px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid #edf0eb; }
+.recent-sessions li { min-height: 57px; padding: 12px 2px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid #edf0eb; transition: background .18s ease, padding .18s ease, transform .18s ease; }
+.recent-sessions li:hover { padding-inline: 8px; transform: translateX(2px); background: #fbfcf9; }
 .recent-sessions li strong { color: var(--ink); font-size: .83rem; font-weight: 640; }
-.recent-sessions span { color: var(--muted); text-align: right; font-size: .73rem; }
+.session-meta { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.session-date { color: var(--muted); font-size: .72rem; white-space: nowrap; }
+.session-stats { display: flex; align-items: center; gap: 5px; }
+.session-stat { padding: 4px 7px; border: 1px solid transparent; border-radius: 999px; font-size: .65rem; font-weight: 620; line-height: 1.25; white-space: nowrap; }
+.session-present { border-color: #dcebe0; background: #f0f7f1; color: #4e7b5b; }
+.session-late { border-color: #f0e5d3; background: #fbf6ec; color: #967044; }
+.session-absent { border-color: #f0dfda; background: #fbf2ef; color: #a15f50; }
 
 /* Forms */
 .form-panel { margin-top: 0; }

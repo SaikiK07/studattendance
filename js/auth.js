@@ -29,6 +29,7 @@ window.AttendEaseAuth = {
   signOut() {
     localStorage.removeItem(this.sessionKey);
     localStorage.removeItem("attendease.activeStudent.v1");
+    localStorage.removeItem("attendease.demoRole.v1");
     window.location.assign("../index.html");
   }
 };
@@ -71,9 +72,10 @@ if (requiredRole) {
   }
 }
 
-document.querySelectorAll("[data-sign-out]").forEach((link) => {
-  link.addEventListener("click", (event) => {
+document.querySelectorAll("[data-sign-out]").forEach((control) => {
+  control.addEventListener("click", (event) => {
     event.preventDefault();
+    if (!window.confirm("Are you sure you want to sign out?")) return;
     window.AttendEaseAuth.signOut();
   });
 });

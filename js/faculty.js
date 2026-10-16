@@ -34,11 +34,30 @@ function renderFacultyDashboard() {
     const item = document.createElement("li");
     const title = document.createElement("strong");
     title.textContent = session.subject;
-    const detail = document.createElement("span");
+    const detail = document.createElement("div");
+    detail.className = "session-meta";
+    const date = document.createElement("time");
+    date.className = "session-date";
+    date.dateTime = session.date;
+    date.textContent = new Date(`${session.date}T00:00:00`).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
     const present = session.entries.filter((entry) => entry.status === "Present").length;
     const late = session.entries.filter((entry) => entry.status === "Late").length;
     const absent = session.entries.filter((entry) => entry.status === "Absent").length;
-    detail.textContent = `${new Date(`${session.date}T00:00:00`).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })} · ${present} present · ${late} late · ${absent} absent`;
+    const stats = document.createElement("span");
+    stats.className = "session-stats";
+    stats.setAttribute("role", "group");
+    stats.setAttribute("aria-label", `${present} present, ${late} late, ${absent} absent`);
+    [
+      ["present", present],
+      ["late", late],
+      ["absent", absent]
+    ].forEach(([status, count]) => {
+      const stat = document.createElement("span");
+      stat.className = `session-stat session-${status}`;
+      stat.textContent = `${count} ${status}`;
+      stats.append(stat);
+    });
+    detail.append(date, stats);
     item.append(title, detail);
     recentSessions.append(item);
   });
@@ -62,5 +81,3 @@ async function loadFacultyDashboard() {
 }
 
 loadFacultyDashboard();
-
-
